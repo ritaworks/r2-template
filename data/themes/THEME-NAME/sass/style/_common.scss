@@ -1,35 +1,59 @@
-@charset "UTF-8";
+Skip to content Search or jump to… Pull requests Issues Marketplace Explore @kojimaritawks ritaworks / r2-template 1 01 Code Issues Pull requests Actions Projects Wiki Security Insights r2-template/data/themes/THEME-NAME/sass/style/_common.scss @izuharaaa izuharaaa path修正 Latest commit ee62934 on 14 Jul History 1 contributor 186 lines (171 sloc) 3.1 KB @charset "UTF-8";
+
 // --------------------------------------------------
 // Headings
 // --------------------------------------------------
-h3 {
+h2 {
   &.top {
-  // トップページ用
+    // トップページ用
 
   }
+
   &:not(.top) {
-  // サブページ用
+    // サブページ用
 
   }
 }
+
+h3 {
+  &.top {
+    // トップページ用
+
+  }
+
+  &:not(.top) {
+    // サブページ用
+
+  }
+}
+
 h4 {
   &.top {
     // トップページ用
 
   }
+
   &:not(.top) {
     // サブページ用
 
   }
 }
+
 h5 {
   &.top {
+
     // トップページ用
 
   }
-  &:not(.top) {
-    // サブページ用
 
+  &:not(.top) {
+
+    // サブページ用
+      {
+      font-weight: bold;
+      color: $primary;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -42,6 +66,7 @@ h5 {
 
 .nodrop-table {
   tr {
+
     th,
     td {
       @media only screen and (max-width: $screen-tb) {
@@ -49,6 +74,7 @@ h5 {
         width: auto !important;
       }
     }
+
     th {
       @media only screen and (max-width: $screen-tb) {
         white-space: nowrap;
@@ -63,6 +89,7 @@ h5 {
 //全体ホバー
 .hover-all {
   position: relative;
+
   >a {
     position: absolute;
     display: block;
@@ -78,6 +105,7 @@ h5 {
 a[href^="tel:"] {
   text-decoration: none;
   color: $base-font-color;
+
   @media only screen and (min-width: $screen-pc-min) {
     pointer-events: none;
   }
@@ -96,6 +124,7 @@ a[href^="tel:"] {
   padding-bottom: 56.25%;
   height: 0px;
   position: relative;
+
   iframe {
     position: absolute;
     top: 0;
@@ -110,22 +139,27 @@ a[href^="tel:"] {
   h4 {
     // 見出しのスタイル
   }
+
   .news-detail-free {
     // 自由文のスタイル
   }
+
   .news-detail-image {
     // 画像のスタイル
     text-align: center;
     margin: 10px auto;
+
     >img {
       max-width: 100%;
       height: auto;
       width: auto;
     }
   }
+
   .news-detail-pdf {
     // pdfのスタイル
   }
+
   >*:empty {
     display: none;
     padding: 0;
@@ -134,6 +168,7 @@ a[href^="tel:"] {
     font-size: 0;
     background: none;
     border: none;
+
     &:before,
     &:after {
       display: none;
@@ -146,19 +181,23 @@ a[href^="tel:"] {
 // --------------------------------------------------
 body {
   width: 100%;
+
   &.open {
     position: fixed;
     height: 100%;
     overflow: hidden;
   }
+
   @if $header-fixed-pc {
     padding-top: $header-height-pc;
   }
+
   @media only screen and (max-width: $screen-tb) {
     @if $header-fixed-sp {
       position: relative;
       padding-top: $header-height-sp;
     }
+
     @else {
       padding-top: 0;
     }
@@ -177,10 +216,15 @@ body {
   box-sizing: border-box;
   background-color: #fff;
   transition: left 0.3s;
+
   @media only screen and (min-width: $screen-pc-min) {
     display: none;
   }
+
   body.open & {
     left: 0;
   }
 }
+
+© 2021 GitHub,
+Inc. Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About Loading complete
