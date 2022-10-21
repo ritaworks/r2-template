@@ -245,7 +245,7 @@ td,
 th {
   text-align: left;
   vertical-align: top;
-  font-feature-settings:palt;
+  font-feature-settings: "palt";
 }
 
 ol {
@@ -302,8 +302,8 @@ li,
 form,
 p {
   text-align: inherit;
-  font-feature-settings:palt;
-  text-align:justyfy;
+  font-feature-settings: "palt";
+  text-align: justify;
 }
 h1,
 h2,
