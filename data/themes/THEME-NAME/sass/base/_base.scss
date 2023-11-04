@@ -4,11 +4,10 @@ body {
   color: $base-font-color;
   font-size: $base-font-size;
   font-family: $base-font;
+  font-weight: $base-font-weight;
 }
 
-
 p,
-a,
 dt,
 dd,
 li,
@@ -17,13 +16,20 @@ td {
   line-height: $base-line-height;
 }
 
-
 a {
   @include link;
 
   color: $base-link-color;
   &:hover {
     color: $base-link-color;
+  }
+  //電話番号
+  &[href^="tel:"] {
+    color: $base-font-color;
+    text-decoration: none;
+    @media only screen and (min-width: $screen-pc-min) {
+      pointer-events: none;
+    }
   }
 }
 

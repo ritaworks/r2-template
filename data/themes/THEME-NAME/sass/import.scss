@@ -4,7 +4,6 @@
 @import 'core/core';
 @import 'core/mixins/utility';
 @import 'style/variable';
-@import 'style/editor';
 @import 'core/class';
 
 @import 'core/grid';
@@ -14,11 +13,16 @@
 @import 'base/base';
 @import 'base/cms';
 
-// @import 'module/iziModal';
-// @import 'module/button/button01';
-// @import 'module/button/button02';
-// @import 'module/pager/pager01';
-// @import 'module/pager/pager02';
+// @import 'style/plugin/calendar';
 
-@import 'style/common';
+// @import 'style/common/animation';
+// @import 'style/common/dpc';
+@import 'style/common/button';
+@import 'style/common/table';
+@import 'style/common/color';
+@import 'style/common/list';
+@import 'style/common/layout';
+@import 'style/common/common';
+@import 'style/common/form';
+
 @import 'style/style';

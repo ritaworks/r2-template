@@ -10,17 +10,20 @@ $responsive: true;
 $header-fixed-pc: false;
 $header-fixed-sp: false;
 
+// コンテナ幅
+$container-width: 1000px;
+
 // pcのヘッダーの高さ(必須)
 $header-height-pc: 100px;
 
 // スマホのヘッダーの高さ(必須)
 $header-height-sp: 60px;
 
-// LightCMS導入サイトかどうかの設定 - true/false
+// CMS導入サイトかどうかの設定 - true/false
 $light-cms: true;
 
-// LightCMS使用時に設定 - CMSエディタ内幅指定
-$light-cms-column-width: 690px;
+// CMS使用時に設定 - CMSエディタ内幅指定
+$light-cms-column-width: $container-width;
 
 // プレークポイント
 $screen-tb: 768px;
@@ -32,12 +35,13 @@ $screen-tb-min: ($screen-sp + 1) !default;
 // 基本値の設定（全ページ共通）
 $base-font: "ヒラギノ角ゴシック ProN", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 $base-font-color: #333;
-$base-link-color: #0000ee;
+$base-link-color: #0000ee; //推奨:$primary
 $link-underline: true !default;
 
 // 基本値の設定（全ページ共通）
 $base-font-size: 16px;
 $base-font-size-tb: 14px;
+$base-font-weight: 400;
 $base-line-height: 2;
 $base-letter-spacing: 0.06em;
 
@@ -56,7 +60,7 @@ $grid-gutter-width-tb: 10px !default;
 $grid-gutter-width-sp: $grid-gutter-width-tb !default;
 
 // コンテナ(.container)サイズ
-$container-pc: (1000px + $grid-gutter-width-pc) !default;
+$container-pc: ($container-width + $grid-gutter-width-pc) !default;
 $container-tb: auto !default;
 $container-sp: auto !default;
 
