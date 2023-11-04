@@ -27,8 +27,10 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  text-align: justify;
 }
 
+main,
 footer,
 header,
 hgroup,
@@ -92,9 +94,6 @@ img {
   border: 0;
   vertical-align: bottom;
   max-width: 100%;
-  &.pdf_icon {
-    vertical-align: middle;
-  }
 }
 
 svg:not(:root) {
@@ -245,9 +244,9 @@ table {
 
 td,
 th {
-  padding: 0;
   text-align: left;
   vertical-align: top;
+  font-feature-settings: "palt";
 }
 
 ol {
@@ -304,6 +303,7 @@ li,
 form,
 p {
   text-align: inherit;
+  font-feature-settings: "palt";
 }
 h1,
 h2,
@@ -316,5 +316,5 @@ h6 {
 }
 
 figure {
- margin: 0; 
+  margin: 0;
 }

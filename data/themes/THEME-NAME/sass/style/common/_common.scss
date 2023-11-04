@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+// --------------------------------------------------
+// 追加分ここから
+// --------------------------------------------------
+
+
+
+
+
+
+// --------------------------------------------------
+// Headings
+// --------------------------------------------------
+h2 {
+  &.top {
+    // トップページ用
+  }
+
+  &:not(.top) {
+    // サブページ用
+  }
+}
+
+h3 {
+  &.top {
+    // トップページ用
+  }
+
+  &:not(.top) {
+    // サブページ用
+  }
+}
+
+h4 {
+  &.top {
+    // トップページ用
+  }
+
+  &:not(.top) {
+    // サブページ用
+  }
+}
+
+h5 {
+  &.top {
+    // トップページ用
+  }
+
+  &:not(.top) {
+    // サブページ用
+    font-weight: bold;
+    color: $primary;
+    margin-bottom: 10px;
+  }
+}
+
+// --------------------------------------------------
+// Common
+// --------------------------------------------------
+// タグの色指定
+.tag {
+  display: inline-block;
+  font: {
+    size: 12px;
+    weight: bold;
+  }
+  color: #fff;
+  line-height: 1.5;
+  padding: 0 5px;
+  background: $primary;
+  &.-info {
+    background: $secondary;
+  }
+}
+
+//全体ホバー
+.hover-all {
+  position: relative;
+  > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    font-size: 0;
+  }
+}
+
+//youtubeの自動レスポンシブ対応
+.youtube-wrap {
+  height: 0;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  > iframe {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+// オブジェクトフィット
+.ofi {
+  > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &.-top > img {
+    object-position: top;
+  }
+  &.-bottom > img {
+    object-position: bottom;
+  }
+  &.-left > img {
+    object-position: left;
+  }
+  &.-right > img {
+    object-position: right;
+  }
+  // [1]縦横の比率を変えたくない場合に使用する。
+  // [2]padding-top: 100%;（親要素に対する縦の比率）を指定する。
+  &.-ratio {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    >img {
+      min-height: 100%;
+      width: 100%;
+      min-width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto auto;
+    }
+  }
+}
+
+
+//複数お知らせ・ブログがある場合は複製して、親のクラス名を変更する。
+// --------------------------------------------------
+// お知らせ詳細
+// 複数お知らせ・ブログがある場合は複製して、親のクラス名を変更する。
+// --------------------------------------------------
+// お知らせ詳細のレイアウト
+// h1:キービジュアル
+// h2:ページタイトル
+.news-detail {
+  h3 {
+    // 見出しのスタイル
+    margin-top: 60px;
+  }
+  h4 {
+    // 見出し(小)のスタイル
+    margin-top: 30px;
+  }
+  .news-detail-free {
+    // 自由文のスタイル
+    margin: 0 0 40px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .news-detail-image {
+    // 画像のスタイル
+    text-align: center;
+    margin: 10px auto;
+    > img {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+  .news-detail-pdf {
+    a[href$=".pdf"] {
+      vertical-align: middle;
+      &:after {
+        content: "";
+        height: 16px;
+        width: 16px;
+        background: url(../img/pdf.png) no-repeat center / contain;
+        margin-left: 5px;
+      }
+    }
+  }
+  > *:empty {
+    display: none;
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// 矢印が必要な場合は.iconを編集してください。
+.pagination {
+  text-align: center;
+
+  .item {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    font: {
+      size: 20px;
+      weight: bold;
+    }
+    color: $primary;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid $primary;
+    background: #fff;
+    margin: 0 5px 10px;
+    transition: all 0.3s;
+
+    &.icon {
+      display: none;
+    }
+
+    &[href="#"] {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  a:hover,
+  .active {
+    color: #fff;
+    background: $primary;
+  }
+}
+

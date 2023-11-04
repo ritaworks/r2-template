@@ -5,20 +5,24 @@
   #tinymce {
     width: $light-cms-column-width;
     padding-top: 0;
+    &.article-free p {
+      margin-bottom: 20px;
+    }
+    .slide-menu {
+      display: block;
+      padding-top: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
   }
-  // #centerColumn {
-  //   width: $light-cms-column-width;
-  //   padding-top: 0;
-  // }
-  // #leftColumn {
-  //   width: $light-cms-column-width;
-  //   padding-top: 0;
-  // }
-  // #rightColumn {
-  //   width: $light-cms-column-width;
-  //   padding-top: 0;
-  // }
   .error {
     color: $warn-color;
+  }
+  blockquote {
+    border-left: 5px solid #ddd;
+    padding: 5px 0 5px 30px;
+    margin: 0;
   }
 }
